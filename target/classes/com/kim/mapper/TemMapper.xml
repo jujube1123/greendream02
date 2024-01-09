@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kim.mapper.TemMapper">
+
+<select id="temList" resultType="com.kim.model.TemVO">
+	select *
+	from dht
+	order by dtim asc;
+</select>
+
+<select id="temData" resultType="com.kim.model.TemVO">
+	select tdb
+	from dht
+	order by dtim asc;
+</select>
+
+
+</mapper>
