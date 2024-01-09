@@ -15,7 +15,7 @@ ${dth[0]}
 		<table>
 		<tr><td>현재 시간 ${dth[0].dtim}</td><td>현재 습도 ${dth[0].hdb}</td><td>현재 온도 ${dth[0].tdb}</td></tr>
 		</table>
-
+	<div>asdfasdfsdaf</div>
 	<!-- 셀렉트값들 
 	<c:forEach items="${dth}" var="on">
 	<table border="1">
