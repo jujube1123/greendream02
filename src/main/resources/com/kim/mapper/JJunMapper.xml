@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.kim.mapper.JJunMapper">
+ 	<select id="dht" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dht ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTem" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dht ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTem" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dht ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHum" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dht ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHum" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dht ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTem" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dht;
+ 	</select>
+ 	
+ 	<select id="averageHum" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dht;
+ 	</select>
+ 	
+ 	<update id="temAdjust">
+ 		UPDATE temAdjust 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNow" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjust;
+ 	</select>
+ 	
+ 	<update id="humAdjust">
+ 		UPDATE humAdjust 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNow" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjust;
+ 	</select>
+ </mapper>
