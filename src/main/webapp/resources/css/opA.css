@@ -1,0 +1,238 @@
+@charset "UTF-8";
+	/* header 부분 */
+	* {
+		font-family: 'Sunflower';
+	}
+	#all{
+		 background-color: #2a2c39;
+	}
+
+	#room{
+	
+		display: flex;
+		position: relative;
+		top: 30px;
+		color:white;
+		margin: 0;
+		align-items: center;
+		height: 50px;
+		font-weight: 500;
+	}
+	#roomName{
+		font-size: 20px;
+		position: relative;
+		left:30px;
+		background-color:#393e52;
+		border-radius: 8px;
+	}
+
+	#roomTem{
+		position: relative;
+		left:40px;
+		font-size: 20px;
+		background-color:#393e52;
+		
+	}
+	#roomHum{
+		font-size: 20px;
+		position: relative;
+		left:50px;
+		background-color:#393e52;
+		
+		
+	}
+	#sel{
+		background-color:#393e52;
+		color:white;
+		width: 250px;
+		border-radius: 8px;
+	}
+	/* 실시간 정보 및 날씨 */
+	#realtime{
+		display: flex;
+		position: relative;
+		top: 80px;
+		justify-content: space-around;
+		font-weight: 400;
+	}
+	#realtimeTem{
+		position: relative;
+		background-color: #393e52;
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
+		width: 400px;
+		height: 160px;
+		border-radius: 10px;
+		color: #FEFEFE; 
+		
+	}
+	#realtimeHum{
+		background-color: #393e52;
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
+		width: 400px;
+		height: 160px;
+		border-radius: 10px;
+		color: #FEFEFE; 
+		
+	}
+	#weather{
+		background-color: #393e52;
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
+		width: 400px;
+		position: relative;
+		height: 160px;
+		border-radius: 10px;
+		color: #FEFEFE; 
+	}
+	.name{
+	font-size: 20px;
+	position: relative;
+	width:170px;
+	left:10px;
+	top:8px;
+	}
+	.data{
+		position: relative;
+		left: 150px;
+		top: 20px;
+		width:270px;
+		font-size: 40px;
+	}
+	.date{
+		position: relative;
+		left:245px;
+		top: 46px;
+		font-size: 14px;
+		width: 150px;
+	}
+
+	/* 실시간 그래프 */
+	#graph{
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		background-color: gray;
+		height: 399px;
+		top: 120px;
+		font-weight: 400;
+	}
+	#graphTem{
+		background-color:#393e52;
+		width: 50%;
+	}
+	#graphHum{
+		width: 50%;
+		border-left: 2px solid green;
+		background-color: #393e52;
+	}
+	#detail{
+		position: relative;
+		display: flex;
+		height: 130px;
+		top: 130px;
+		justify-content: space-around;
+		align-items: center;
+		font-weight: 400;
+		background-color:#2a2c39;
+		color: #FEFEFE; 
+	}
+	#temDetail{
+		display: flex;
+		justify-content: space-around;
+		
+		width:50%;
+	}
+	#humDetail{
+		display: flex;
+		justify-content: space-around;
+		color: #FEFEFE; 
+		width:50%;
+	}
+	#highTem{
+		background-color: blue;
+		position: relative;
+		width: 160px;
+		height: 50px;
+		border-radius: 10px;
+		background-color: #393e52;
+		color: #FEFEFE; 
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.2);
+	}
+	#lowTem{
+		background-color: red;
+		position: relative;
+		width: 160px;
+		height: 50px;
+		border-radius: 10px;
+		background-color: #393e52;
+		color: #FEFEFE; 
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.2);
+	}
+	#averageTem{
+		background-color: ivory;
+		position: relative;
+		width: 160px;
+		height: 50px;
+		border-radius: 10px;
+		background-color: #393e52;
+		color: #FEFEFE; 
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.2);
+	}
+	#highHum{
+		background-color: blue;
+		position: relative;
+		width: 160px;
+		height: 50px;
+		border-radius: 10px;
+		background-color: #393e52;
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.2);
+	}
+	#lowHum{
+		background-color: red;
+		position: relative;
+		width: 160px;
+		height: 50px;
+		border-radius: 10px;
+		background-color: #393e52;
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.2);
+	}
+	#averageHum{
+		background-color: ivory;
+		position: relative;
+		width: 160px;
+		height: 50px;
+		border-radius: 10px;
+		background-color: #393e52;
+		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.2);
+	}
+	#ht{
+		position: relative;
+		top: 12.5px;
+		left: 40px;
+		
+	}
+	#lt{
+		position: relative;
+		top: 12.5px;
+		left: 40px;
+	}
+	#at{
+		position: relative;
+		top: 12.5px;
+		left: 40px;
+	}
+	#hh{
+		position: relative;
+		top: 12.5px;
+		left: 40px;
+	}
+	#lh{
+		position: relative;
+		top: 12.5px;
+		left: 40px;
+	}
+	#ah{
+		position: relative;
+		top: 12.5px;
+		left: 40px;
+	}
+	
