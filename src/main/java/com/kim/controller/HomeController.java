@@ -56,11 +56,7 @@ public class HomeController {
 		ArrayList<TemVO> tem = ts.temList(vo);
 		model.addAttribute("tem",ts.temList(vo));
 		
-		List<TemVO> temdata = ts.temData();
-		model.addAttribute("temdata",temdata);
-		
-		System.out.println(tem);
-		System.out.println(temdata);
+		//System.out.println(tem);
 		
 		return "temCharts";
 	}
@@ -70,10 +66,31 @@ public class HomeController {
 		ArrayList<TemVO> tem = ts.temList(vo);
 		model.addAttribute("tem",tem);
 		
-		System.out.println(tem);	
+		//System.out.println(tem);	
 		
 		//return tem;
 		return new ResponseEntity<>(tem,HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "humList", method = RequestMethod.GET)
+	public String humList(Model model, TemVO vo) {
+		ArrayList<TemVO> hum = ts.temList(vo);
+		model.addAttribute("hum",hum);
+		
+		//System.out.println(hum);
+		
+		return "humCharts";
+	}
+	
+	@RequestMapping(value = "humCharts", method = RequestMethod.GET)
+	public ResponseEntity<ArrayList<TemVO>> humCharts(Model model, TemVO vo) {
+		ArrayList<TemVO> hum = ts.temList(vo);
+		model.addAttribute("hum",hum);
+		
+		//System.out.println(hum);	
+		
+		//return tem;
+		return new ResponseEntity<>(hum,HttpStatus.OK);
 	}
 	
 }
