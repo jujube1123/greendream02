@@ -12,11 +12,5 @@
 	order by dtim asc;
 </select>
 
-<select id="temData" resultType="com.kim.model.TemVO">
-	select tdb
-	from dht
-	order by dtim asc;
-</select>
-
 
 </mapper>

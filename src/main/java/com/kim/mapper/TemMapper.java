@@ -9,5 +9,4 @@ public interface TemMapper {
 
 	public ArrayList<TemVO> temList(TemVO vo);
 	
-	public List<TemVO> temData();
 }
