@@ -9,5 +9,4 @@ public interface TemService {
 
 		public ArrayList<TemVO> temList(TemVO vo);
 		
-		public List<TemVO> temData();
 }

@@ -18,8 +18,4 @@ public class TemServiceImpl implements TemService{
 	public ArrayList<TemVO> temList(TemVO vo){
 		return tm.temList(vo);
 	}
-	
-	public List<TemVO> temData() {
-		return tm.temData();
-	}
 }
