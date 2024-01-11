@@ -13,7 +13,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-<script type="text/javascript" src="resources/js/temChartsInB.js"></script>
+
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -94,7 +94,7 @@
 
 </div>
 <script type="text/javascript" src="/resources/js/inB.js"></script>
-<script type="text/javascript" src="/resources/js/humCharts.js"></script>
-<script type="text/javascript" src="/resources/js/temCharts.js"></script>
+<script type="text/javascript" src="/resources/js/humChartsInB.js"></script>
+<script type="text/javascript" src="resources/js/temChartsInB.js"></script>
 </body>
 </html>

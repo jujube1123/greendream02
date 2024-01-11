@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<form action="adtem" id="adform">
+<form action="adtemOpC" id="adform">
    <div class="wrapper" >
 		<header>
 			<h2>기준온도 조절</h2>
