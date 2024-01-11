@@ -12,5 +12,52 @@
 	order by dtim asc;
 </select>
 
+<select id="temListOpB" resultType="com.kim.model.TemVO">
+	select *
+	from dhtOpB
+	order by dtim asc;
+</select>
+
+<select id="temListOpC" resultType="com.kim.model.TemVO">
+	select *
+	from dhtOpC
+	order by dtim asc;
+</select>
+
+<select id="temListInA" resultType="com.kim.model.TemVO">
+	select *
+	from dhtInA
+	order by dtim asc;
+</select>
+
+<select id="temListInB" resultType="com.kim.model.TemVO">
+	select *
+	from dhtInB
+	order by dtim asc;
+</select>
+
+<select id="temListInc" resultType="com.kim.model.TemVO">
+	select *
+	from dhtInC
+	order by dtim asc;
+</select>
+
+<select id="temListTrA" resultType="com.kim.model.TemVO">
+	select *
+	from dhtTrA
+	order by dtim asc;
+</select>
+
+<select id="temListTrB" resultType="com.kim.model.TemVO">
+	select *
+	from dhtTrB
+	order by dtim asc;
+</select>
+
+<select id="temListTrC" resultType="com.kim.model.TemVO">
+	select *
+	from dhtTrC
+	order by dtim asc;
+</select>
 
 </mapper>
