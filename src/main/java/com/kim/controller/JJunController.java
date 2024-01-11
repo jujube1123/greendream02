@@ -167,9 +167,11 @@ public class JJunController {
 	@GetMapping("temAdjustOpC")
 	public void taOpC(Model model, AdDTO ad) {
 		// 기준온도
-		model.addAttribute("adtOpC", js.temAdNowOpC(ad));
+		Model ca = model.addAttribute("adtOpC", js.temAdNowOpC(ad));
 		// 기준습도
 		model.addAttribute("adhOpC", js.humAdNowOpC(ad));		
+		
+		System.out.println(ca);
 	}
 	
 	@GetMapping("humAdjustOpC")

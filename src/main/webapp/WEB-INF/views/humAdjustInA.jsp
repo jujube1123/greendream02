@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<form action="adhum" id="adform">
+<form action="adhumInA" id="adform">
    <div class="wrapper">
 		<header>
 			<h2>기준습도 조절</h2>
@@ -19,12 +19,12 @@
 		<div class="price-input">
 			<div class="field">
 				<span>Min</span>
-				<input type="number" value="${adh.minhumInA}" class="min-input" name="minhum">
+				<input type="number" value="${adhInA.minhum}" class="min-input" name="minhum">
 			</div>
 			<div class="seperator">~</div>
 			<div class="field">
 				<span>Max</span>
-				<input type="number" value="${adh.maxhumInA}" class="max-input" name="maxhum">
+				<input type="number" value="${adhInA.maxhum}" class="max-input" name="maxhum">
 			</div>
 		</div>
 	<!-- <div class="mm">
@@ -38,9 +38,9 @@
   	
   		<div class="range-input">
   			<input type="range" min="0"
-			max="100" value="${adh.minhumInA}" class="min-range"> 			
+			max="100" value="${adhInA.minhum}" class="min-range"> 			
   			<input type="range" min="0"
-			max="100" value="${adh.maxhumInA}" class="max-range"> 			
+			max="100" value="${adhInA.maxhum}" class="max-range"> 			
 			
   		</div>
    </div>
