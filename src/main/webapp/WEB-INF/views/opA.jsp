@@ -70,8 +70,8 @@
 	</div>
 	
 	<div id="graph">
-		<div id="graphTem"><canvas id="line-chart" width="150" height="100"></canvas></div>
-		<div id="graphHum"><canvas id="line-chart02" width="150" height="100"></canvas></div>
+		<div id="graphTem"><canvas id="line-chart" width="0" height="0"></canvas></div>
+		<div id="graphHum"><canvas id="line-chart02" width="0" height="0"></canvas></div>
 	</div>
 	
 	<div id='detail'>
