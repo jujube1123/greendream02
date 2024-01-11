@@ -5,13 +5,13 @@
 <head>
 <style type="text/css">
 #bar{
-		display: flex;
+		
 		width: 100%;
 		height: 50px;
 		background-color: #2f3243;
     	margin: 0;
    	 	align-items: center;
- 		justify-content: space-between;
+ 		/* display: table; */
  		color: #FEFEFE; 
  		font-weight: 600;
  		font-family: 'Sunflower';
@@ -21,16 +21,19 @@
 		font-size: 20px;
 		left:10px;
 		color:white;
-/* 		color:#1DDB16; */
-
+		top: 8px;
+		
 	}
 	#title{	
     	position: relative;
-
+		margin: auto;
 		font-size: 22px;
-		
+		top: 8px;
 		color: white;
-	
+		text-align: center;
+		/* display: table-cell;
+		vertical-align: middle; */
+		 left: 642px; 
 	}
 	#admin{
 		position: relative;
@@ -38,7 +41,11 @@
     	flex:none;
 		font-size: 20px;
 		color: white;
-
+		float: right;
+		top: 10px;
+	}
+	.text{
+		
 	}
 	
 </style>
@@ -49,9 +56,9 @@
 <body>
 
 <div id="bar">
-	   <div id="gdi">GreenDream IoT</div>	 
-	   <div id="title">병원 온도,습도 실시간 모니터링</div>		
-	   <div id='admin'>관리자 이름,이메일 로그아웃</div>
+	   <span id="gdi" class="text">GreenDream IoT</span>	 
+	   <span id="title" class="text">병원 온도,습도 실시간 모니터링</span>		
+	   <span id='admin' class="text">관리자 이름,이메일 로그아웃</span>
 	</div>
 
 
