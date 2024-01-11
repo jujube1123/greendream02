@@ -35,18 +35,27 @@ function getHum(){
 				datasets: [{
 				        data: humList,
 				        label: "습도",
-				        borderColor: "#3e95cd",
-				        fill: false
-			          }
-					]
+				        borderColor: "#E8D9FF",
+				        // 그래프 선 안을 안 채움
+				        fill: false,
+				        // 그래프 선의 부드러움 조절. 낮을 수록 꺾인 그래프
+				        tension: 0.4
+			          }]
 				  },
 				options: {
 					plugins:{
 					 	title: {
 					 		display: true,
-					 		text: '실시간 습도 측정 그래프'
-					    	}
-						},
+					 		text: '실시간 습도 측정 그래프',
+					 		font: {
+					 			size: 20
+					 		},
+					 		color: '#F6F6F6',
+					 	},
+					    legend:{
+					    	display: false,
+					    }
+					},
 				  	animation:{
 				  		duration: 0
 				  		},
@@ -57,14 +66,22 @@ function getHum(){
 			      	  },
 				  	scales: {
 					  	y: {
-					  		min: 20,
-					  		max: 50,
-					  			
-					  		},
+					  		min: 10,
+					  		max: 60,
+				  			grid:{
+						  		display: false
+			  				},
+					  		ticks:{
+					  			color: '#F6F6F6'
+					  		}
+					  	},
 				  		x: {
 				  			grid:{
 						  		display: false
-			  				}
+			  				},
+					  		ticks:{
+					  			color: '#F6F6F6'
+					  		}
 			  			}
 			  		}			  	
 				  }
