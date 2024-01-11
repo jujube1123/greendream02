@@ -3,8 +3,9 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
  <mapper namespace="com.kim.mapper.JJunMapper">
+ 
+<!-- opA -->
  	<select id="dht" resultType="com.kim.model.YangVO">
  		SELECT * FROM dht ORDER BY dtim desc;
  	</select>
@@ -32,8 +33,7 @@
  	<select id="averageHum" resultType="double">
  		SELECT ROUND(avg(hdb),1) FROM dht;
  	</select>
- 	
- 	<update id="temAdjust">
+	<update id="temAdjust">
  		UPDATE temAdjust 
 		set mintem = #{mintem}, maxtem = #{maxtem};
  	</update>
@@ -50,4 +50,375 @@
  	<select id="humAdNow" resultType="com.kim.model.AdDTO">
  		SELECT * FROM humAdjust;
  	</select>
+
+<!-- opB -->
+ 	<select id="dhtOpB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpB ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTemOpB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpB ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTemOpB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpB ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHumOpB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpB ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHumOpB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpB ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTemOpB" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dhtOpB;
+ 	</select>
+ 	
+ 	<select id="averageHumOpB" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dhtOpB;
+ 	</select>
+	<update id="temAdjustOpB">
+ 		UPDATE temAdjustOpB 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNowOpB" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjustOpB;
+ 	</select>
+ 	
+ 	<update id="humAdjustOpB">
+ 		UPDATE humAdjustOpB 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNowOpB" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjustOpB;
+ 	</select>
+ 	
+ <!-- opC -->
+ 	<select id="dhtOpC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpC ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTemOpC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpC ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTemOpC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpC ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHumOpC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpC ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHumOpC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtOpC ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTemOpC" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dhtOpC;
+ 	</select>
+ 	
+ 	<select id="averageHumOpC" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dhtOpC;
+ 	</select>
+	<update id="temAdjustOpC">
+ 		UPDATE temAdjustOpC 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNowOpC" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjustOpC;
+ 	</select>
+ 	
+ 	<update id="humAdjustOpC">
+ 		UPDATE humAdjustOpC 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNowOpC" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjustOpC;
+ 	</select>
+ 	
+ <!-- inA -->
+ 	<select id="dhtInA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInA ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTemInA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInA ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTemInA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInA ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHumInA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInA ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHumInA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInA ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTemInA" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dhtInA;
+ 	</select>
+ 	
+ 	<select id="averageHumInA" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dhtInA;
+ 	</select>
+	<update id="temAdjustInA">
+ 		UPDATE temAdjustInA 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNowInA" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjustInA;
+ 	</select>
+ 	
+ 	<update id="humAdjustInA">
+ 		UPDATE humAdjustInA 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNowInA" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjustInA;
+ 	</select>
+ 	
+ <!-- inB -->
+ 	<select id="dhtInB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInB ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTemInB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInB ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTemInB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInB ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHumInB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInB ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHumInB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInB ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTemInB" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dhtInB;
+ 	</select>
+ 	
+ 	<select id="averageHumInB" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dhtInB;
+ 	</select>
+	<update id="temAdjustInB">
+ 		UPDATE temAdjustInB 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNowInB" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjustInB;
+ 	</select>
+ 	
+ 	<update id="humAdjustInB">
+ 		UPDATE humAdjustInB 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNowInB" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjustInB;
+ 	</select>
+ 	
+ <!-- inC -->
+ 	<select id="dhtInC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInC ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTemInC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInC ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTemInC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInC ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHumInC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInC ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHumInC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtInC ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTemInC" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dhtInC;
+ 	</select>
+ 	
+ 	<select id="averageHumInC" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dhtInC;
+ 	</select>
+	<update id="temAdjustInC">
+ 		UPDATE temAdjustInC 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNowInC" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjustInC;
+ 	</select>
+ 	
+ 	<update id="humAdjustInC">
+ 		UPDATE humAdjustInC 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNowInC" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjustInC;
+ 	</select>
+ 	
+ <!-- trA -->
+ 	<select id="dhtTrA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrA ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTemTrA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrA ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTemTrA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrA ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHumTrA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrA ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHumTrA" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrA ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTemTrA" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dhtTrA;
+ 	</select>
+ 	
+ 	<select id="averageHumTrA" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dhtTrA;
+ 	</select>
+	<update id="temAdjustTrA">
+ 		UPDATE temAdjustTrA 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNowTrA" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjustTrA;
+ 	</select>
+ 	
+ 	<update id="humAdjustTrA">
+ 		UPDATE humAdjustTrA 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNowTrA" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjustTrA;
+ 	</select>
+ 	
+ <!-- trB -->
+ 	<select id="dhtTrB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrB ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTemTrB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrB ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTemTrB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrB ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHumTrB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrB ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHumTrB" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrB ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTemTrB" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dhtTrB;
+ 	</select>
+ 	
+ 	<select id="averageHumTrB" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dhtTrB;
+ 	</select>
+	<update id="temAdjustTrB">
+ 		UPDATE temAdjustTrB 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNowTrB" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjustTrB;
+ 	</select>
+ 	
+ 	<update id="humAdjustTrB">
+ 		UPDATE humAdjustTrB 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNowTrB" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjustTrB;
+ 	</select>
+ 	
+ <!-- trC -->
+ 	<select id="dhtTrC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrC ORDER BY dtim desc;
+ 	</select>
+ 	
+ 	<select id="highTemTrC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrC ORDER BY tdb desc;
+ 	</select>
+ 	
+ 	<select id="lowTemTrC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrC ORDER BY tdb asc;
+ 	</select>
+ 	
+ 	<select id="highHumTrC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrC ORDER BY hdb desc;
+ 	</select>
+ 	
+ 	<select id="lowHumTrC" resultType="com.kim.model.YangVO">
+ 		SELECT * FROM dhtTrC ORDER BY hdb asc;
+ 	</select>
+ 	
+ 	<select id="averageTemTrC" resultType="double">
+ 		SELECT ROUND(avg(tdb),1) FROM dhtTrC;
+ 	</select>
+ 	
+ 	<select id="averageHumTrC" resultType="double">
+ 		SELECT ROUND(avg(hdb),1) FROM dhtTrC;
+ 	</select>
+	<update id="temAdjustTrC">
+ 		UPDATE temAdjustTrC 
+		set mintem = #{mintem}, maxtem = #{maxtem};
+ 	</update>
+ 	
+ 	<select id="temAdNowTrC" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM temAdjustTrC;
+ 	</select>
+ 	
+ 	<update id="humAdjustTrC">
+ 		UPDATE humAdjustTrC 
+		set minhum = #{minhum}, maxhum = #{maxhum};
+ 	</update>
+ 	
+ 	<select id="humAdNowTrC" resultType="com.kim.model.AdDTO">
+ 		SELECT * FROM humAdjustTrC;
+ 	</select>
+ 	
+ 
+ 
  </mapper>
