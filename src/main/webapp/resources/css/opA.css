@@ -104,6 +104,13 @@
 		font-size: 14px;
 		width: 150px;
 	}
+	#weatherData{
+		position: relative;
+		left: 10px;
+		top: 20px;
+		width:380px;
+		font-size: 20px;
+	}
 
 	/* 실시간 그래프 */
 	#graph{
@@ -128,7 +135,7 @@
 		position: relative;
 		display: flex;
 		height: 130px;
-		top: 130px;
+		top: 46.5px;
 		justify-content: space-around;
 		align-items: center;
 		font-weight: 400;
