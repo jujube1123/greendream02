@@ -5,13 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700;&display= swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/resources/css/opA.css">
 <title>GreenDreamIoT</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+<script type="text/javascript" src="resources/js/temCharts.js"></script>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -53,12 +55,23 @@
 		</div>
 		<div id="weather">
 		<div class="name" id="weatherName">현재날씨</div>
+		<div id="weatherData">
+			<span>날씨 :</span>
+			<span id="wathe"></span>
+			<span>일평균 기온 :</span>
+			<span id="temp"></span>
+			<span>일평균 습도 :</span>
+			<span id="humidity"></span>
+	<!-- 	<span id="wind"></span>
+			<span id="temp_min"></span> -->
+		</div>
+		<%-- <div class="date" id="temDate">${dth[0].dtim} 기준</div> --%>
 		</div>
 	</div>
 	
 	<div id="graph">
-		<div id="graphTem"></div>
-		<div id="graphHum"></div>
+		<div id="graphTem"><canvas id="line-chart" width="0" height="0"></canvas></div>
+		<div id="graphHum"><canvas id="line-chart02" width="0" height="0"></canvas></div>
 	</div>
 	
 	<div id='detail'>
@@ -81,5 +94,7 @@
 
 </div>
 <script type="text/javascript" src="/resources/js/opA.js"></script>
+<script type="text/javascript" src="/resources/js/humCharts.js"></script>
+<script type="text/javascript" src="/resources/js/temCharts.js"></script>
 </body>
 </html>

@@ -19,12 +19,12 @@
 		<div class="price-input">
 			<div class="field">
 				<span>Min</span>
-				<input type="number" value="-40" class="min-input" name="mintem">
+				<input type="number" value="${adt.mintem}" class="min-input" name="mintem">
 			</div>
 			<div class="seperator">~</div>
 			<div class="field">
 				<span>Max</span>
-				<input type="number" value="100" class="max-input" name="maxtem">
+				<input type="number" value="${adt.maxtem}" class="max-input" name="maxtem">
 			</div>
 		</div>
 	<!-- <div class="mm">
@@ -38,15 +38,16 @@
   	
   		<div class="range-input">
   			<input type="range" min="-40"
-			max="100" value="-40" class="min-range"> 			
+			max="80" value="${adt.mintem}" class="min-range"> 			
   			<input type="range" min="-40"
-			max="100" value="100" class="max-range"> 			
+			max="80" value="${adt.maxtem}" class="max-range"> 			
 			
   		</div>
    </div>
    <input type="submit" value="적용" style=" cursor: pointer" id="adsubmit" >
    <input type="button" value="취소" style=" cursor: pointer" onclick="javascript:self.close();">
  </form>  
+
 <script type="text/javascript" src="/resources/js/temAdjust.js"></script>
 </body>
 </html>

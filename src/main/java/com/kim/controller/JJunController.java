@@ -33,8 +33,7 @@ public class JJunController {
 		model.addAttribute("averageTem", js.averageTem(yang));
 		// 평균습도
 		model.addAttribute("averageHum", js.averageHum(yang));
-		double av =js.averageTem(yang);
-		System.out.println(av);
+
 		// 기준온도
 		model.addAttribute("adt", js.temAdNow(ad));
 		// 기준습도
@@ -49,15 +48,21 @@ public class JJunController {
 		
 	}
 	@GetMapping("temAdjust")
-	public void ta() {
-		
+	public void ta(Model model, AdDTO ad) {
+		// 기준온도
+		model.addAttribute("adt", js.temAdNow(ad));
+		// 기준습도
+		model.addAttribute("adh", js.humAdNow(ad));
 		
 		
 	}
 	
 	@GetMapping("humAdjust")
-	public void ha() {
-		
+	public void ha(Model model, AdDTO ad) {
+		// 기준온도
+		model.addAttribute("adt", js.temAdNow(ad));
+		// 기준습도
+		model.addAttribute("adh", js.humAdNow(ad));
 	}
 	
 	@GetMapping("adtem")
