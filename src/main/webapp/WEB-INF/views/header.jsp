@@ -58,13 +58,8 @@
 <div id="bar">
 	   <span id="gdi" class="text" style=" cursor: pointer" onclick="location.href='main'">GreenDream IoT</span>	 
 	   <span id="title" class="text">병원 온도,습도 실시간 모니터링</span>		
-	   <span id='admin' class="text">관리자 이름,이메일 로그아웃</span>
+	   <span id='admin' class="text">admin <span style=" cursor: pointer" onclick="location.href='login'">로그아웃</span></span>
 	</div>
-
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
