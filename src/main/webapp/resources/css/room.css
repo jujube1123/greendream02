@@ -107,9 +107,9 @@
 	#weatherData{
 		position: relative;
 		left: 10px;
-		top: 20px;
+		top: 42px;
 		width:380px;
-		font-size: 20px;
+		font-size: 16px;
 	}
 
 	/* 실시간 그래프 */

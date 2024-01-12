@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/resources/css/inB.css">
+<link rel="stylesheet" href="/resources/css/room.css">
 <title>GreenDreamIoT</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -57,6 +57,7 @@
 		<div class="name" id="weatherName">현재날씨</div>
 		<div id="weatherData">
 			<span>날씨 :</span>
+			<span id="icon"></span>
 			<span id="wathe"></span>
 			<span>일평균 기온 :</span>
 			<span id="temp"></span>
