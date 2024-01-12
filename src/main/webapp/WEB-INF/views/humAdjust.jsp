@@ -45,7 +45,7 @@
   		</div>
    </div>
    <input type="submit" value="적용" style=" cursor: pointer" id="adsubmit" >
-   <input type="button" value="취소" style=" cursor: pointer" onclick="javascript:self.close();">
+   <input type="button" value="취소" style=" cursor: pointer" id="cancel" onclick="javascript:self.close();">
  </form>  
 <script type="text/javascript" src="/resources/js/humAdjust.js"></script>
 </body>

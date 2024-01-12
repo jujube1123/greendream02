@@ -56,7 +56,7 @@
 <body>
 
 <div id="bar">
-	   <span id="gdi" class="text">GreenDream IoT</span>	 
+	   <span id="gdi" class="text" style=" cursor: pointer" onclick="location.href='main'">GreenDream IoT</span>	 
 	   <span id="title" class="text">병원 온도,습도 실시간 모니터링</span>		
 	   <span id='admin' class="text">관리자 이름,이메일 로그아웃</span>
 	</div>
