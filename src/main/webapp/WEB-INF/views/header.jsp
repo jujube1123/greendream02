@@ -33,7 +33,7 @@
 		text-align: center;
 		/* display: table-cell;
 		vertical-align: middle; */
-		 left: 642px; 
+		 left: 640px; 
 	}
 	#admin{
 		position: relative;
