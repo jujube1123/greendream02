@@ -7,113 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700;&display= swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style type="text/css">
-	* {
-		font-family: 'Sunflower';
-	}
-	#all{
-		 background-color: #2a2c39;
-		 width: 100%;
-		 height: 869px;
-		
-	}
-	#room{
-		width: 100%;
-		display: flex;
-		position: relative;
-		top: 30px;
-		color:white;
-		margin: 0;
-		align-items: center;
-		height: 50px;
-		font-weight: 500;
-	}
-	#roomName{
-		font-size: 20px;
-		position: relative;
-		left:30px;
-		background-color:#393e52;
-		border-radius: 8px;
-	}
-	#sel{
-		background-color:#393e52;
-		color:white;
-		width: 250px;
-		border-radius: 8px;
-	}
-	#row1{
-		display: flex;
-		position: relative;
-		top: 80px;
-		justify-content: space-around;
-		font-weight: 400;
-	}
-	#row2{
-		display: flex;
-		position: relative;
-		top: 140px;
-		justify-content: space-around;
-		font-weight: 400;
-	}
-	#row3{
-		display: flex;
-		position: relative;
-		top: 200px;
-		justify-content: space-around;
-		font-weight: 400;
-	}
-	.A{
-		position: relative;
-		background-color: #393e52;
-		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
-		width: 400px;
-		height: 160px;
-		border-radius: 10px;
-		color: #FEFEFE; 
-		
-	}
-	.B{
-		background-color: #393e52;
-		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
-		width: 400px;
-		height: 160px;
-		border-radius: 10px;
-		color: #FEFEFE; 
-		
-	}
-	.C{
-		background-color: #393e52;
-		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
-		width: 400px;
-		position: relative;
-		height: 160px;
-		border-radius: 10px;
-		color: #FEFEFE; 
-	}
-	.name{
-		font-size: 20px;
-		position: relative;
-		width:170px;
-		left:10px;
-		top:8px;
-	}
-	.data{
-		position: relative;
-		left: 80px;
-		top: 20px;
-		width:270px;
-		font-size: 40px;
-	}
-	.date{
-		position: relative;
-		left:245px;
-		top: 46px;
-		font-size: 14px;
-		width: 150px;
-	}
-</style>
+
+<link rel="stylesheet" href="/resources/css/main.css">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>GreenDreamIoTMain</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
@@ -144,47 +41,47 @@
 		</div>
 		<div class="B" style=" cursor: pointer" onclick="location.href='opB'">
 		<div class="name">수술실B</div>
-		<div class="data">${dth[0].tdb}°C | ${dth[0].hdb}%</div>
-		<div class="date">${dth[0].dtim} 기준</div>
+		<div class="data">${dthOpB[0].tdb}°C | ${dthOpB[0].hdb}%</div>
+		<div class="date">${dthOpB[0].dtim} 기준</div>
 		</div>
 		<div class="C" style=" cursor: pointer" onclick="location.href='opC'">
-		<div class="name">수술실B</div>
-		<div class="data">${dth[0].tdb}°C | ${dth[0].hdb}%</div>
-		<div class="date">${dth[0].dtim} 기준</div>
+		<div class="name">수술실C</div>
+		<div class="data">${dthOpC[0].tdb}°C | ${dthOpC[0].hdb}%</div>
+		<div class="date">${dthOpC[0].dtim} 기준</div>
 		</div>	
 	</div>
 	<div id="row2">
 		<div class="A" style=" cursor: pointer" onclick="location.href='inA'">
 		<div class="name">중환자실A</div>
-		<div class="data">${dth[0].tdb}°C | ${dth[0].hdb}%</div>
-		<div class="date">${dth[0].dtim} 기준</div>
+		<div class="data">${dthInA[0].tdb}°C | ${dthInA[0].hdb}%</div>
+		<div class="date">${dthInA[0].dtim} 기준</div>
 		</div>
 		<div class="B" style=" cursor: pointer" onclick="location.href='inB'">
 		<div class="name">중환자실B</div>
-		<div class="data">${dth[0].tdb}°C | ${dth[0].hdb}%</div>
-		<div class="date">${dth[0].dtim} 기준</div>
+		<div class="data">${dthInB[0].tdb}°C | ${dthInB[0].hdb}%</div>
+		<div class="date">${dthInB[0].dtim} 기준</div>
 		</div>
 		<div class="C" style=" cursor: pointer" onclick="location.href='inC'">
 		<div class="name">중환자실C</div>
-		<div class="data">${dth[0].tdb}°C | ${dth[0].hdb}%</div>
-		<div class="date">${dth[0].dtim} 기준</div>
+		<div class="data">${dthInC[0].tdb}°C | ${dthInC[0].hdb}%</div>
+		<div class="date">${dthInC[0].dtim} 기준</div>
 		</div>	
 	</div>
 	<div id="row3">
 		<div class="A" style=" cursor: pointer" onclick="location.href='trA'">
 		<div class="name">진료실A</div>
-		<div class="data">${dth[0].tdb}°C | ${dth[0].hdb}%</div>
-		<div class="date">${dth[0].dtim} 기준</div>
+		<div class="data">${dthTrA[0].tdb}°C | ${dthTrA[0].hdb}%</div>
+		<div class="date">${dthTrA[0].dtim} 기준</div>
 		</div>
 		<div class="B" style=" cursor: pointer" onclick="location.href='trB'">
 		<div class="name">진료실B</div>
-		<div class="data">${dth[0].tdb}°C | ${dth[0].hdb}%</div>
-		<div class="date">${dth[0].dtim} 기준</div>
+		<div class="data">${dthTrB[0].tdb}°C | ${dthTrB[0].hdb}%</div>
+		<div class="date">${dthTrB[0].dtim} 기준</div>
 		</div>
 		<div class="C" style=" cursor: pointer" onclick="location.href='trC'">
 		<div class="name">진료실C</div>
-		<div class="data">${dth[0].tdb}°C | ${dth[0].hdb}%</div>
-		<div class="date">${dth[0].dtim} 기준</div>
+		<div class="data">${dthTrC[0].tdb}°C | ${dthTrC[0].hdb}%</div>
+		<div class="date">${dthTrC[0].dtim} 기준</div>
 		</div>	
 	</div>
 </div>
