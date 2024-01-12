@@ -118,5 +118,25 @@ body{
 	box-shadow: 0 0 6px rgba(0, 0, 0, .05);
 }
 
+#adsubmit {
+	position: relative;
+	width: 200px;
+	height: 40px;
+	top: 10px;
+	background-color: #2a2c39;
+	color: white;
+	font-size: 20px;
+	border-radius: 5px;
+}
 
+#cancel{
+	position: relative;
+	width: 200px;
+	height: 40px;
+	top: 10px;
+	background-color: #393e52;
+	color: white;
+	font-size: 20px;
+	border-radius: 5px;
+}
 

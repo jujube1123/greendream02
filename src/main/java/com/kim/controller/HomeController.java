@@ -98,7 +98,7 @@ public class HomeController {
 		ArrayList<TemVO> tem = ts.temListOpB(vo);
 		model.addAttribute("tem",ts.temListOpB(vo));
 		
-		System.out.println(tem);
+		
 		
 		return "temChartsOpB";
 	}
@@ -108,7 +108,7 @@ public class HomeController {
 		ArrayList<TemVO> tem = ts.temListOpB(vo);
 		model.addAttribute("tem",tem);
 		
-		System.out.println(tem);	
+		
 		
 		//return tem;
 		return new ResponseEntity<>(tem,HttpStatus.OK);
@@ -120,7 +120,7 @@ public class HomeController {
 		model.addAttribute("hum",hum);
 		
 		//System.out.println(hum);
-		System.out.println(hum);
+		
 		return "humChartsOpB";
 	}
 	
