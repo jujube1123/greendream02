@@ -53,16 +53,17 @@
 		<div class="data"id="humData">${dth[0].hdb}%</div>
 		<div class="date"id="humDate">${dth[0].dtim} 기준</div>
 		</div>
+		
 		<div id="weather">
 		<div class="name" id="weatherName">현재날씨</div>
 		<div id="weatherData">
-			<span>날씨 :</span>
-			<span id="wathe"></span>
-			<span>일평균 기온 :</span>
-			<span id="temp"></span>
-			<span>일평균 습도 :</span>
-			<span id="humidity"></span>
-	<!-- 	<span id="wind"></span>
+
+		<span>날씨 :</span> <span id="wathe"></span>
+		<div>
+			<span>일평균 기온 :</span><span id="temp"></span>
+			<span>일평균 습도 :</span><span id="humidity"></span>
+		</div>
+					<!-- 	<span id="wind"></span>
 			<span id="temp_min"></span> -->
 		</div>
 		<%-- <div class="date" id="temDate">${dth[0].dtim} 기준</div> --%>
