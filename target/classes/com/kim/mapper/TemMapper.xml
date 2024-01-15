@@ -36,7 +36,7 @@
 	order by dtim asc;
 </select>
 
-<select id="temListInc" resultType="com.kim.model.TemVO">
+<select id="temListInC" resultType="com.kim.model.TemVO">
 	select *
 	from dhtInC
 	order by dtim asc;
