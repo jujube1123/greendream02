@@ -1,4 +1,4 @@
-const API_KEY = "#"; //add your API KEY 
+const API_KEY = "70447c588d71afabe3d6675d78565c20"; //add your API KEY 
 const COORDS = 'coords'; //좌표를 받을 변수 
 
 //DOM객체들 
@@ -42,7 +42,8 @@ function getWeather(lat, lon) {
         const weatherDescription = json.weather[0].description;
         const weatherIcon = json.weather[0].icon;
         const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
-    
+        alert(weatherIconAdrs);
+        alert(weatherIconAdrs);
         //받아온 정보들을 표현한다. 
         weatherInfo.innerText = `${temperature} °C / @${place} / ${weatherDescription}`;
         weatherIconImg.setAttribute('src', weatherIconAdrs);
