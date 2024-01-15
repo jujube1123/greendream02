@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.kim.model.AdDTO;
 import com.kim.model.YangVO;
@@ -40,7 +41,7 @@ public class JJunController {
 		model.addAttribute("adh", js.humAdNow(ad));
 	}
 	
-	@GetMapping("main")
+	@PostMapping("main")
 	public void main (Model model, YangVO yang) {
 		
 		//페이지 실행 시 라즈베리파이로 입력한 DB의  온도, 습도, 시간 정보를 배열에 담아서 가져옴
