@@ -2,8 +2,8 @@
 $(document).ready(function(){
 	
 	getHum();
-	// 2초마다 자동 새로고침 실행
-	//setTimeout("history.go();",60000);
+	// 10초마다 자동 새로고침 실행
+	setTimeout("history.go();",10000);
 });
 
 function getHum(){
