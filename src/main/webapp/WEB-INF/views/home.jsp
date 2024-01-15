@@ -1,47 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<!DOCTYPE html>
 <html>
 <head>
-
-	<title>Home</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/resources/css/homcss.css">
+<link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display= swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+		<title>관리자로그인페이지</title>
 </head>
 <body>
-	<!-- 가장 최근의 셀렉트값 -->
-	${dth[0]}
-
-
-	<table>
-		<tr>
-			<td>현재 시간 ${dth[0].dtim}</td>
-			<td>현재 습도 ${dth[0].hdb}</td>
-			<td>현재 온도 ${dth[0].tdb}</td>
-		</tr>
-	</table>
-
-	<table id="weather">
-        <thead>
-            <td>지역</td>
-            <td>날씨</td>
-            <td>온도</td>
-            <td>습도</td>
-            <td>풍향/풍속</td>
-            <td>체감온도</td>
-        </thead>
-        <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tbody>
-    </table>
-    
-   <div id="admin">로그인</div>
-    
-   <script src="/resources/js/K_test.js" type="module"></script>
+<form action ="/main" method="POST">
+	<div id="containerlogin">
+		<div id="containerbox01">
+			<div id="containerboxid">
+				<span>아이디</span>
+				<input type="text"  name="username" id="username" placeholder="아이디를 입력해주세요.">
+				<c:if test="${empty msg ? true : false}" var="result">
+            	<h2><c:out value="${msg}" /></h2>
+            </c:if>
+			</div>	
+			<div id="containerboxpw">	
+				<span>비밀번호</span>
+				<input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요.">
+				<input type="submit" value="로그인" id="loginbtn" style=" font-family: 'Noto Sans KR'; color: #393e52; font-weight:700; background: #fff; border: 1px solid rgba(0,0,0,1);" >
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+			</div>	
+		</div>	
+	</div>
+</form>	
+</body>
+</html>
 	<!-- 셀렉트값들 
 	<c:forEach items="${dth}" var="on">
 	<table border="1">
@@ -68,7 +58,3 @@
 	setTimeout("history.go();", 2000)
 	</script>
 	-->
-</body>
-
-
-</html>
