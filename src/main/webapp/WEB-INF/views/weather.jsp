@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/resources/css/weather.css">
     <title>now weather?</title>
 </head>
 <body>
@@ -16,5 +16,5 @@
         <img class="weatherIcon">
     </div>
 </body>
-<script src="app.js"></script>
+<script src="/resources/js/weather.js"></script>
 </html>
