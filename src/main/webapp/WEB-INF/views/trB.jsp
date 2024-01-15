@@ -62,6 +62,7 @@
 			<span id="temp"></span>
 			<span>일평균 습도 :</span>
 			<span id="humidity"></span>
+			<img id="icon">
 	<!-- 	<span id="wind"></span>
 			<span id="temp_min"></span> -->
 		</div>

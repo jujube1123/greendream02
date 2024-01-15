@@ -27,6 +27,8 @@ const humidity = document.querySelector('#humidity')
 const wind = document.querySelector('#wind')
 // 체감온도
 const temp_min = document.querySelector('#temp_min')
+// 아이콘
+const icon = document.querySelector('#icon')
 
 // 풍속에 계산식 입니다
 const degToCompass = (num) => {
@@ -52,9 +54,14 @@ const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lo
         const windDirection = degToCompass(data.wind.deg)
         // 아래부터 차례로 #weather에 들어갈 값들 입니다.
         /*city.innerText = data.name*/
-        wathe.innerText = data.weather[0].description
+        wathe.innerText = data.weather[0].description;
+        const weatherIcon= data.weather[0].icon;
+        const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+        
+        alert(weatherIconAdrs);
         temp.innerText = `${temperature}ºC`
         humidity.innerText = `${data.main.humidity}%`
+        icon.setAttribute('src', weatherIconAdrs);
       /*  wind.innerText = `${windDirection} ${data.wind.speed} m/s`   */         
 /*        temp_min.innerText = `${data.main.temp_min}ºC`
         temp_max.innerText = `${data.main.temp_max}ºC`*/
