@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--	
+		#SpEL문법 
+		hasRole("admin") - admin 권한을 가지고 있어야 접근가능 
+		hasAnyRole("admin","user") - admin,user권한중 한가지만 가지고 있으면 접근가능 
+		permitAll - 모두 접근가능
+		denyAll - 	모두 접근불가능 
+		isAnonymous() -	 인증을 하지 않은 사용자일 경우(로그인하지 않은 사용자) 
+		isRememberMe() - Remember-me 기능으로 로그인한 사용자일 경우(자동로그인 사용자) isAuthenticated() - 
+		인증을 한 사용자일 경우(로그인한 	사용자)
+		isFullyAuthenticated() - 인증을 한 사용자이면서 Remember-me 기능으로 로그인하지 않은 사용자
+		
+-->
+<!-- AccessDenied DeniedHandler bcryptPasswordEncoder  customUserDetails-->
+<!-- class가 파일의 경로를 나타내는거  -->
+ 	<bean id="AccessDenied" class="com.kim.security.LoginSuccessHandler"></bean>
+	<bean id="DeniedHandler" class="com.kim.security.DeniedHandler"></bean>
+	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	<bean id="customUserDetails" class="com.kim.security.CustomUserDetailsService" />
+<!-- securyty에 관련된 Mapper 입니다. -->
+	<security:http>
+
+		<security:intercept-url pattern="/security/all" access="permitAll" />
+
+		<security:intercept-url pattern="/security/member" access="hasRole('ROLE_MEMBER')" />
+
+		<security:access-denied-handler ref="DeniedHandler" />
+
+		<security:form-login login-page="/login" authentication-success-handler-ref="AccessDenied" />
+
+	</security:http>
+	
+	<security:authentication-manager>
+		<security:authentication-provider user-service-ref="customUserDetails">
+
+			<security:password-encoder ref="bcryptPasswordEncoder" />
+
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+</beans>
