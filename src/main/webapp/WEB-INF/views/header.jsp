@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,17 +36,10 @@
 		vertical-align: middle; */
 		 left: 640px; 
 	}
-	#admin{
-		position: relative;
-		right:20px;
-    	flex:none;
-		font-size: 20px;
+	#adminbtn{
 		color: white;
 		float: right;
-		top: 10px;
-	}
-	.text{
-		
+	    padding-top: 10px;
 	}
 	
 </style>
@@ -57,9 +51,12 @@
 
 <div id="bar">
 	   <span id="gdi" class="text" style=" cursor: pointer" onclick="location.href='main'">GreenDream IoT</span>	 
-	   <span id="title" class="text">병원 온도,습도 실시간 모니터링</span>		
-	   <span id='admin' class="text">admin <span style=" cursor: pointer" onclick="location.href='login'">로그아웃</span></span>
-	</div>
+	   <span id="title" class="text">병원 온도,습도 실시간 모니터링</span>	
+	 <div id="adminbtn">  	
+	   <span id="admin" class="text">admin<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /></span>
+	   <span style="cursor: pointer" onclick="location.href='home'">로그아웃</span>
+	 </div>  
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div>온도</div>
-	<div>습도</div>
-	<div>데이터 로그</div>
+
 </body>
 </html>
