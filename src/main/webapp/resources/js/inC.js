@@ -55,7 +55,7 @@ const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lo
         wathe.innerText = data.weather[0].description
         temp.innerText = `${temperature}ºC`
         humidity.innerText = `${data.main.humidity}%`
-        wind.innerText = `${windDirection} ${data.wind.speed} m/s`            
+        /*wind.innerText = `${windDirection} ${data.wind.speed} m/s`    */        
 /*        temp_min.innerText = `${data.main.temp_min}ºC`
         temp_max.innerText = `${data.main.temp_max}ºC`*/
 /*        	city.innerText = data.name
