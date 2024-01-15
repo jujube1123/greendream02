@@ -521,6 +521,9 @@ public class JJunController {
 		return "close";
 	}
 	
+	@GetMapping("weather")
+	public void adshumTrC() {
 
+	}
 	
 }
