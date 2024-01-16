@@ -92,8 +92,8 @@ function getTem(){
 			      	  },
 				  	scales: {
 					  	y: {
-					  		min: 20,
-					  		max: 35,
+					  		min:15,
+					  		max: 30,
 				  			grid: {
 						  		display: false
 			  				},
