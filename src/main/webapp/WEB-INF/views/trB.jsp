@@ -24,14 +24,14 @@
 			<select title="" onchange="window.open(value,'_self');" id="sel">
 			   	<option value="main">전체보기</option>
 			   	<option value="opA">수술실A</option>
-			   	<option value="opB" selected>수술실B</option>
+			   	<option value="opB" >수술실B</option>
 			   	<option value="opC">수술실C</option>
 			   	<option value="inA">중환자실A</option>
 			   	<option value="inB">중환자실B</option>
 			   	<option value="inC">중환자실C</option>
-			   	<option value="trA">진료실A</option>
-			   	<option value="trB">진료실B</option>
-			   	<option value="trC">진료실C</option>
+			   	<option value="trA">병실A</option>
+			   	<option value="trB"selected>병실B</option>
+			   	<option value="trC">병실C</option>
 			</select>
 		</div>
 		<div id="roomTem" style=" cursor: pointer" onclick="temAd()">
@@ -99,7 +99,7 @@
 
 </div>
 <script type="text/javascript" src="/resources/js/trB.js"></script>
-<script type="text/javascript" src="/resources/js/humChartsOpB.js"></script>
-<script type="text/javascript" src="resources/js/temChartsOpB.js"></script>
+<script type="text/javascript" src="/resources/js/humChartsTrB.js"></script>
+<script type="text/javascript" src="resources/js/temChartsTrB.js"></script>
 </body>
 </html>
