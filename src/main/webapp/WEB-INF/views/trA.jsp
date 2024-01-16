@@ -56,12 +56,18 @@
 		<div id="weather">
 		<div class="name" id="weatherName">현재날씨</div>
 		<div id="weatherData">
-			<span>날씨 :</span>
-			<span id="wathe"></span>
-			<span>일평균 기온 :</span>
-			<span id="temp"></span>
-			<span>일평균 습도 :</span>
-			<span id="humidity"></span>
+			<div class="weathericon01">
+				<span>날씨 :</span>
+				<span id="wathe"></span>
+				<img id="icon" style="width: 90px;height: 90px; display: block;">
+			</div>	
+			
+			<div class="weathericon02">	
+				<span>일평균 기온 :</span>
+				<span id="temp"></span>
+				<span>일평균 습도 :</span>
+				<span id="humidity"></span>
+			</div>
 	<!-- 	<span id="wind"></span>
 			<span id="temp_min"></span> -->
 		</div>

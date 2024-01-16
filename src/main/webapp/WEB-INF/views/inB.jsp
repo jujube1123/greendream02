@@ -53,23 +53,27 @@
 		<div class="data"id="humData">${dthInB[0].hdb}%</div>
 		<div class="date"id="humDate">${dthInB[0].dtim} 기준</div>
 		</div>
-		<div id="weather">
+
+	<div id="weather">
 		<div class="name" id="weatherName">현재날씨</div>
 		<div id="weatherData">
-			<span>날씨 :</span>
-			<span id="icon"></span>
-			<span id="wathe"></span>
-			<span>일평균 기온 :</span>
-			<span id="temp"></span>
-			<span>일평균 습도 :</span>
-			<span id="humidity"></span>
+			<div class="weathericon01">
+				<span>날씨 :</span>
+				<span id="wathe"></span>
+				<img id="icon" style="width: 90px;height: 90px; display: block;">
+			</div>	
+			
+			<div class="weathericon02">	
+				<span>일평균 기온 :</span>
+				<span id="temp"></span>
+				<span>일평균 습도 :</span>
+				<span id="humidity"></span>
+			</div>
 	<!-- 	<span id="wind"></span>
 			<span id="temp_min"></span> -->
 		</div>
-		<%-- <div class="date" id="temDate">${dth[0].dtim} 기준</div> --%>
-		</div>
-	</div>
-	
+	</div>	
+</div>	
 	<div id="graph">
 		<div id="graphTem"><canvas id="line-chart" width="0" height="0"></canvas></div>
 		<div id="graphHum"><canvas id="line-chart02" width="0" height="0"></canvas></div>
@@ -87,7 +91,7 @@
 			<div id="averageHum"><span id="ah">평균: ${averageHumInB}%</span></div>	
 		</div>
 	</div>
-
+</div>
 <!-- <script>
 	setTimeout("history.go();", 10000)
 </script> -->
