@@ -66,8 +66,8 @@ function getHum(){
 			      	  },
 				  	scales: {
 					  	y: {
-					  		min: 30,
-					  		max: 60,
+					  		min: 40,
+					  		max: 70,
 				  			grid:{
 						  		display: false
 			  				},
