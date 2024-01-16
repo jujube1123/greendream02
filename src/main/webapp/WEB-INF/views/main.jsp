@@ -12,6 +12,13 @@
 <meta charset="UTF-8">
 <title>GreenDreamIoTMain</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+	// 10초마다 자동 새로고침 실행
+	setTimeout("history.go();",10000);
+});
+</script>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
