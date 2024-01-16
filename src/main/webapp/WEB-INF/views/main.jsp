@@ -26,9 +26,9 @@
 			   	<option value="inA">중환자실A</option>
 			   	<option value="inB">중환자실B</option>
 			   	<option value="inC">중환자실C</option>
-			   	<option value="trA">진료실A</option>
-			   	<option value="trB">진료실B</option>
-			   	<option value="trC">진료실C</option>
+			   	<option value="trA">병실A</option>
+			   	<option value="trB">병실B</option>
+			   	<option value="trC">병실C</option>
 			</select>
 		</div>
 	</div>
@@ -69,17 +69,17 @@
 	</div>
 	<div id="row3">
 		<div class="A" style=" cursor: pointer" onclick="location.href='trA'">
-		<div class="name">진료실A</div>
+		<div class="name">병실A</div>
 		<div class="data">${dthTrA[0].tdb}°C | ${dthTrA[0].hdb}%</div>
 		<div class="date">${dthTrA[0].dtim} 기준</div>
 		</div>
 		<div class="B" style=" cursor: pointer" onclick="location.href='trB'">
-		<div class="name">진료실B</div>
+		<div class="name">병실B</div>
 		<div class="data">${dthTrB[0].tdb}°C | ${dthTrB[0].hdb}%</div>
 		<div class="date">${dthTrB[0].dtim} 기준</div>
 		</div>
 		<div class="C" style=" cursor: pointer" onclick="location.href='trC'">
-		<div class="name">진료실C</div>
+		<div class="name">병실C</div>
 		<div class="data">${dthTrC[0].tdb}°C | ${dthTrC[0].hdb}%</div>
 		<div class="date">${dthTrC[0].dtim} 기준</div>
 		</div>	
