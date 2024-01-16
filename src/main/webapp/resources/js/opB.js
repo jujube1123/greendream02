@@ -52,9 +52,13 @@ const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lo
         const windDirection = degToCompass(data.wind.deg)
         // 아래부터 차례로 #weather에 들어갈 값들 입니다.
         /*city.innerText = data.name*/
-        wathe.innerText = data.weather[0].description
+        wathe.innerText = data.weather[0].description;
+        const weatherIcon= data.weather[0].icon;
+        const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+        
         temp.innerText = `${temperature}ºC`
         humidity.innerText = `${data.main.humidity}%`
+        icon.setAttribute('src', weatherIconAdrs);
 /*        wind.innerText = `${windDirection} ${data.wind.speed} m/s` */           
 /*        temp_min.innerText = `${data.main.temp_min}ºC`
         temp_max.innerText = `${data.main.temp_max}ºC`*/

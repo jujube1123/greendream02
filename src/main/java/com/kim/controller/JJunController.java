@@ -56,6 +56,22 @@ public class JJunController {
 		model.addAttribute("dthTrC", js.dhtTrC(yang));
 		
 	}
+	
+	@GetMapping("main")
+	public void mainpag (Model model, YangVO yang) {
+		
+		//페이지 실행 시 라즈베리파이로 입력한 DB의  온도, 습도, 시간 정보를 배열에 담아서 가져옴
+		model.addAttribute("dth", js.dht(yang));
+		model.addAttribute("dthOpB", js.dhtOpB(yang));
+		model.addAttribute("dthOpC", js.dhtOpC(yang));
+		model.addAttribute("dthInA", js.dhtInA(yang));
+		model.addAttribute("dthInB", js.dhtInB(yang));
+		model.addAttribute("dthInC", js.dhtInC(yang));
+		model.addAttribute("dthTrA", js.dhtTrA(yang));
+		model.addAttribute("dthTrB", js.dhtTrB(yang));
+		model.addAttribute("dthTrC", js.dhtTrC(yang));
+		
+	}
 	@GetMapping("temAdjust")
 	public void ta(Model model, AdDTO ad) {
 		// 기준온도

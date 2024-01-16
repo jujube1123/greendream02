@@ -108,10 +108,30 @@
 		position: relative;
 		left: 10px;
 		top: 42px;
-		width:380px;
+		width: 380px;
 		font-size: 16px;
+		display: flex;
 	}
-
+	#weatherData div:nth-child(1) {
+		position:relative;
+		top: -25px;
+		display: inline-block;
+		width: 150px;
+		height: 100px;
+	}
+	.weathericon02 {
+		width: 200px;
+		display: block;
+	}
+	.weathericon02 span:nth-child(3) {
+		display: inline-block;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	
+	.weathericon02 span:nth-child(4) {
+		width: 50px;
+	}
 	/* 실시간 그래프 */
 	#graph{
 		position: relative;
