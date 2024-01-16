@@ -13,7 +13,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-
+<script type="text/javascript" src="/resources/js/humChartsInB.js"></script>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -29,9 +29,9 @@
 			   	<option value="inA">중환자실A</option>
 			   	<option value="inB" selected>중환자실B</option>
 			   	<option value="inC">중환자실C</option>
-			   	<option value="trA">진료실A</option>
-			   	<option value="trB">진료실B</option>
-			   	<option value="trC">진료실C</option>
+			   	<option value="trA">병실A</option>
+			   	<option value="trB">병실B</option>
+			   	<option value="trC">병실C</option>
 			</select>
 		</div>
 		<div id="roomTem" style=" cursor: pointer" onclick="temAd()">
@@ -53,8 +53,8 @@
 		<div class="data"id="humData">${dthInB[0].hdb}%</div>
 		<div class="date"id="humDate">${dthInB[0].dtim} 기준</div>
 		</div>
-
-	<div id="weather">
+		
+		<div id="weather">
 		<div class="name" id="weatherName">현재날씨</div>
 		<div id="weatherData">
 			<div class="weathericon01">
@@ -72,8 +72,10 @@
 	<!-- 	<span id="wind"></span>
 			<span id="temp_min"></span> -->
 		</div>
-	</div>	
-</div>	
+		<%-- <div class="date" id="temDate">${dth[0].dtim} 기준</div> --%>
+		</div>
+	</div>
+	
 	<div id="graph">
 		<div id="graphTem"><canvas id="line-chart" width="0" height="0"></canvas></div>
 		<div id="graphHum"><canvas id="line-chart02" width="0" height="0"></canvas></div>
@@ -91,7 +93,7 @@
 			<div id="averageHum"><span id="ah">평균: ${averageHumInB}%</span></div>	
 		</div>
 	</div>
-</div>
+
 <!-- <script>
 	setTimeout("history.go();", 10000)
 </script> -->
@@ -100,6 +102,6 @@
 </div>
 <script type="text/javascript" src="/resources/js/inB.js"></script>
 <script type="text/javascript" src="/resources/js/humChartsInB.js"></script>
-<script type="text/javascript" src="resources/js/temChartsInB.js"></script>
+<script type="text/javascript" src="/resources/js/temChartsInB.js"></script>
 </body>
 </html>

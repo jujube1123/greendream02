@@ -29,9 +29,9 @@
 			   	<option value="inA">중환자실A</option>
 			   	<option value="inB">중환자실B</option>
 			   	<option value="inC">중환자실C</option>
-			   	<option value="trA" selected>진료실A</option>
-			   	<option value="trB">진료실B</option>
-			   	<option value="trC">진료실C</option>
+			   	<option value="trA" selected>병실A</option>
+			   	<option value="trB">병실B</option>
+			   	<option value="trC">병실C</option>
 			</select>
 		</div>
 		<div id="roomTem" style=" cursor: pointer" onclick="temAd()">
