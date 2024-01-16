@@ -35,23 +35,23 @@
 			</select>
 		</div>
 		<div id="roomTem" style=" cursor: pointer" onclick="temAd()">
-		기준 온도: ${adtOpB.mintem}°C~${adtOpB.maxtem}°C
+		기준 온도: ${adtTrB.mintem}°C~${adtTrB.maxtem}°C
 		</div>
 		<div id="roomHum" style=" cursor: pointer" onclick="humAd()">
-		기준 습도: ${adhOpB.minhum}%~${adhOpB.maxhum}%
+		기준 습도: ${adhTrB.minhum}%~${adhTrB.maxhum}%
 		</div>
 	</div>
 	
 	<div id="realtime">
 		<div id="realtimeTem">
 		<div class="name" id="temName">실시간 온도</div>
-		<div class="data" id="temData">${dthOpB[0].tdb}°C</div>
-		<div class="date" id="temDate">${dthOpB[0].dtim} 기준</div>
+		<div class="data" id="temData">${dthTrB[0].tdb}°C</div>
+		<div class="date" id="temDate">${dthTrB[0].dtim} 기준</div>
 		</div>
 		<div id="realtimeHum">
 		<div class="name">실시간 습도</div>
-		<div class="data"id="humData">${dthOpB[0].hdb}%</div>
-		<div class="date"id="humDate">${dthOpB[0].dtim} 기준</div>
+		<div class="data"id="humData">${dthTrB[0].hdb}%</div>
+		<div class="date"id="humDate">${dthTrB[0].dtim} 기준</div>
 		</div>
 
 		<div id="weather">
@@ -81,14 +81,14 @@
 	
 	<div id='detail'>
 		<div id="temDetail">
-			<div id="highTem"><span id="ht">최고: ${highTemOpB[0].tdb}°C</span></div>
-			<div id="lowTem"><span id="lt">최저: ${lowTemOpB[0].tdb}°C</span></div>
-			<div id="averageTem"><span id="at">평균: ${averageTemOpB}°C</span></div>	
+			<div id="highTem"><span id="ht">최고: ${highTemTrB[0].tdb}°C</span></div>
+			<div id="lowTem"><span id="lt">최저: ${lowTemTrB[0].tdb}°C</span></div>
+			<div id="averageTem"><span id="at">평균: ${averageTemTrB}°C</span></div>	
 		</div>	
 		<div id="humDetail">
-			<div id="highHum"><span id="hh">최고: ${highHumOpB[0].hdb}%</span></div>
-			<div id="lowHum"><span id="lh">최저: ${lowHumOpB[0].hdb}%</span></div>
-			<div id="averageHum"><span id="ah">평균: ${averageHumOpB}%</span></div>	
+			<div id="highHum"><span id="hh">최고: ${highHumTrB[0].hdb}%</span></div>
+			<div id="lowHum"><span id="lh">최저: ${lowHumTrB[0].hdb}%</span></div>
+			<div id="averageHum"><span id="ah">평균: ${averageHumTrB}%</span></div>	
 		</div>
 	</div>
 
