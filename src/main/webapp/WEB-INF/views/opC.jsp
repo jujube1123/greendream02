@@ -45,13 +45,13 @@
 	<div id="realtime">
 		<div id="realtimeTem">
 		<div class="name" id="temName">실시간 온도</div>
-		<div class="data" id="temData">${dthOpB[0].tdb}°C</div>
-		<div class="date" id="temDate">${dthOpB[0].dtim} 기준</div>
+		<div class="data" id="temData">${dthOpC[0].tdb}°C</div>
+		<div class="date" id="temDate">${dthOpC[0].dtim} 기준</div>
 		</div>
 		<div id="realtimeHum">
 		<div class="name">실시간 습도</div>
-		<div class="data"id="humData">${dthOpB[0].hdb}%</div>
-		<div class="date"id="humDate">${dthOpB[0].dtim} 기준</div>
+		<div class="data"id="humData">${dthOpC[0].hdb}%</div>
+		<div class="date"id="humDate">${dthOpC[0].dtim} 기준</div>
 		</div>
 
 		<div id="weather">
@@ -91,7 +91,7 @@
 			<div id="averageHum"><span id="ah">평균: ${averageHumOpC}%</span></div>	
 		</div>
 	</div>
-	</div>
+
 <!-- <script>
 	setTimeout("history.go();", 10000)
 </script> -->
