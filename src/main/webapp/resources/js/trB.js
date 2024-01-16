@@ -58,7 +58,6 @@ const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lo
         const weatherIcon= data.weather[0].icon;
         const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
         
-        alert(weatherIconAdrs);
         temp.innerText = `${temperature}ºC`
         humidity.innerText = `${data.main.humidity}%`
         icon.setAttribute('src', weatherIconAdrs);

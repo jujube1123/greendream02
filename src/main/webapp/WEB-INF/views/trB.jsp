@@ -22,54 +22,58 @@
 	<div id="room">
 		<div id="roomName">
 			<select title="" onchange="window.open(value,'_self');" id="sel">
-			   	<option value="main" >전체보기</option>
+			   	<option value="main">전체보기</option>
 			   	<option value="opA">수술실A</option>
-			   	<option value="opB">수술실B</option>
+			   	<option value="opB" selected>수술실B</option>
 			   	<option value="opC">수술실C</option>
 			   	<option value="inA">중환자실A</option>
 			   	<option value="inB">중환자실B</option>
 			   	<option value="inC">중환자실C</option>
 			   	<option value="trA">진료실A</option>
-			   	<option value="trB" selected>진료실B</option>
+			   	<option value="trB">진료실B</option>
 			   	<option value="trC">진료실C</option>
 			</select>
 		</div>
 		<div id="roomTem" style=" cursor: pointer" onclick="temAd()">
-		기준 온도: ${adtTrB.mintem}°C~${adtTrB.maxtem}°C
+		기준 온도: ${adtOpB.mintem}°C~${adtOpB.maxtem}°C
 		</div>
 		<div id="roomHum" style=" cursor: pointer" onclick="humAd()">
-		기준 습도: ${adhTrB.minhum}%~${adhTrB.maxhum}%
+		기준 습도: ${adhOpB.minhum}%~${adhOpB.maxhum}%
 		</div>
 	</div>
 	
 	<div id="realtime">
 		<div id="realtimeTem">
 		<div class="name" id="temName">실시간 온도</div>
-		<div class="data" id="temData">${dthTrB[0].tdb}°C</div>
-		<div class="date" id="temDate">${dthTrB[0].dtim} 기준</div>
+		<div class="data" id="temData">${dthOpB[0].tdb}°C</div>
+		<div class="date" id="temDate">${dthOpB[0].dtim} 기준</div>
 		</div>
 		<div id="realtimeHum">
 		<div class="name">실시간 습도</div>
-		<div class="data"id="humData">${dthTrB[0].hdb}%</div>
-		<div class="date"id="humDate">${dthTrB[0].dtim} 기준</div>
+		<div class="data"id="humData">${dthOpB[0].hdb}%</div>
+		<div class="date"id="humDate">${dthOpB[0].dtim} 기준</div>
 		</div>
+
 		<div id="weather">
 		<div class="name" id="weatherName">현재날씨</div>
 		<div id="weatherData">
-			<span>날씨 :</span>
-			<span id="wathe"></span>
-			<span>일평균 기온 :</span>
-			<span id="temp"></span>
-			<span>일평균 습도 :</span>
-			<span id="humidity"></span>
-			<img id="icon">
+			<div class="weathericon01">
+				<span>날씨 :</span>
+				<span id="wathe"></span>
+				<img id="icon" style="width: 90px;height: 90px; display: block;">
+			</div>	
+			
+			<div class="weathericon02">	
+				<span>일평균 기온 :</span>
+				<span id="temp"></span>
+				<span>일평균 습도 :</span>
+				<span id="humidity"></span>
+			</div>
 	<!-- 	<span id="wind"></span>
 			<span id="temp_min"></span> -->
 		</div>
-		<%-- <div class="date" id="temDate">${dth[0].dtim} 기준</div> --%>
-		</div>
 	</div>
-	
+	</div>		
 	<div id="graph">
 		<div id="graphTem"><canvas id="line-chart" width="0" height="0"></canvas></div>
 		<div id="graphHum"><canvas id="line-chart02" width="0" height="0"></canvas></div>
@@ -77,14 +81,14 @@
 	
 	<div id='detail'>
 		<div id="temDetail">
-			<div id="highTem"><span id="ht">최고: ${highTemTrB[0].tdb}°C</span></div>
-			<div id="lowTem"><span id="lt">최저: ${lowTemTrB[0].tdb}°C</span></div>
-			<div id="averageTem"><span id="at">평균: ${averageTemTrB}°C</span></div>	
+			<div id="highTem"><span id="ht">최고: ${highTemOpB[0].tdb}°C</span></div>
+			<div id="lowTem"><span id="lt">최저: ${lowTemOpB[0].tdb}°C</span></div>
+			<div id="averageTem"><span id="at">평균: ${averageTemOpB}°C</span></div>	
 		</div>	
 		<div id="humDetail">
-			<div id="highHum"><span id="hh">최고: ${highHumTrB[0].hdb}%</span></div>
-			<div id="lowHum"><span id="lh">최저: ${lowHumTrB[0].hdb}%</span></div>
-			<div id="averageHum"><span id="ah">평균: ${averageHumTrB}%</span></div>	
+			<div id="highHum"><span id="hh">최고: ${highHumOpB[0].hdb}%</span></div>
+			<div id="lowHum"><span id="lh">최저: ${lowHumOpB[0].hdb}%</span></div>
+			<div id="averageHum"><span id="ah">평균: ${averageHumOpB}%</span></div>	
 		</div>
 	</div>
 
@@ -95,7 +99,7 @@
 
 </div>
 <script type="text/javascript" src="/resources/js/trB.js"></script>
-<script type="text/javascript" src="/resources/js/humChartsTrB.js"></script>
-<script type="text/javascript" src="resources/js/temChartsTrB.js"></script>
+<script type="text/javascript" src="/resources/js/humChartsOpB.js"></script>
+<script type="text/javascript" src="resources/js/temChartsOpB.js"></script>
 </body>
 </html>

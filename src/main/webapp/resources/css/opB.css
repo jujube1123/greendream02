@@ -47,6 +47,7 @@
 		width: 250px;
 		border-radius: 8px;
 	}
+
 	/* 실시간 정보 및 날씨 */
 	#realtime{
 		display: flex;
@@ -73,16 +74,7 @@
 		border-radius: 10px;
 		color: #FEFEFE; 
 		
-	}
-	#weather{
-		background-color: #393e52;
-		box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
-		width: 400px;
-		position: relative;
-		height: 160px;
-		border-radius: 10px;
-		color: #FEFEFE; 
-	}
+	}	
 	.name{
 	font-size: 20px;
 	position: relative;
@@ -107,11 +99,31 @@
 	#weatherData{
 		position: relative;
 		left: 10px;
-		top: 20px;
-		width:380px;
-		font-size: 20px;
+		top: 42px;
+		width: 380px;
+		font-size: 16px;
+		display: flex;
 	}
-
+	#weatherData div:nth-child(1) {
+		position:relative;
+		top: -25px;
+		display: inline-block;
+		width: 150px;
+		height: 100px;
+	}
+	.weathericon02 {
+		width: 200px;
+		display: block;
+	}
+	.weathericon02 span:nth-child(3) {
+		display: inline-block;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	
+	.weathericon02 span:nth-child(4) {
+		width: 50px;
+	}
 	/* 실시간 그래프 */
 	#graph{
 		position: relative;
